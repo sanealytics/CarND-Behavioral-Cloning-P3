@@ -98,43 +98,43 @@ BATCH_SIZE=128
 train_samples, validation_samples = train_test_split(lines, test_size = 0.2)
 train_generator = generator(train_samples, batch_size=BATCH_SIZE)
 validation_generator = generator(validation_samples, batch_size=BATCH_SIZE)
-
+activation_function = "relu"
 
 # Modified NVIDIA model
 model = Sequential()
 model.add(Lambda(lambda x: x / 255.0 - 0.5, input_shape = (160, 320, 3)))
 model.add(Cropping2D(cropping=((70,25), (0,0)))) # Doing this here so same thing happens in predict mode
 
-model.add(Conv2D(3, (1, 1), activation="relu")) # Added this to figure out the right color space
+model.add(Conv2D(3, (1, 1), activation=activation_function)) # Added this to figure out the right color space
 
-model.add(Conv2D(24, (5, 5), strides=(2, 2), activation="relu"))
+model.add(Conv2D(24, (5, 5), strides=(2, 2), activation=activation_function))
 model.add(BatchNormalization()) # Added Batchnorm
 
-model.add(Conv2D(64, (1, 1), activation="relu")) # Added 1x1 convolutions
+model.add(Conv2D(64, (1, 1), activation=activation_function)) # Added 1x1 convolutions
 
-model.add(Conv2D(36, (5, 5), strides=(2, 2), activation="relu"))
+model.add(Conv2D(36, (5, 5), strides=(2, 2), activation=activation_function))
 model.add(BatchNormalization()) # Added Batchnorm
 
-model.add(Conv2D(48, (5, 5), strides=(2, 2), activation="relu"))
+model.add(Conv2D(48, (5, 5), strides=(2, 2), activation=activation_function))
 model.add(BatchNormalization()) # Added Batchnorm
 
-model.add(Conv2D(64, (1, 1), activation="relu")) # Added 1x1 convolutions
+model.add(Conv2D(64, (1, 1), activation=activation_function)) # Added 1x1 convolutions
 
-model.add(Conv2D(64, (3, 3), activation="relu"))
+model.add(Conv2D(64, (3, 3), activation=activation_function))
 model.add(BatchNormalization()) # Added Batchnorm
 
-model.add(Conv2D(64, (3, 3), activation="relu"))
+model.add(Conv2D(64, (3, 3), activation=activation_function))
 model.add(BatchNormalization()) # Added Batchnorm
 
-model.add(Conv2D(64, (1, 1), activation="relu")) # Added 1x1 convolutions
+model.add(Conv2D(64, (1, 1), activation=activation_function)) # Added 1x1 convolutions
 
 model.add(Flatten())
 
-model.add(Dense(100, activation = 'relu'))
+model.add(Dense(100, activation = activation_function))
 model.add(BatchNormalization()) # Added Batchnorm
 
-model.add(Dense(50, activation = 'relu'))
-model.add(Dense(10, activation = 'relu'))
+model.add(Dense(50, activation = activation_function))
+model.add(Dense(10, activation = activation_function))
 model.add(Dense(1))
 
 print('Training model')
