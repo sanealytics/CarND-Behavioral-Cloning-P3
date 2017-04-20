@@ -76,7 +76,7 @@ def generator(samples, batch_size=32):
 
 from keras.models import Sequential
 from keras.layers import Flatten, Dense, Lambda
-from keras.layers import Conv2D, MaxPooling2D, Cropping2D, BatchNormalization
+from keras.layers import Conv2D, Cropping2D, BatchNormalization
 from keras.callbacks import ModelCheckpoint
 
 import matplotlib.pyplot as plt
@@ -110,23 +110,17 @@ model.add(Conv2D(3, (1, 1), activation=activation_function)) # Added this to fig
 model.add(Conv2D(24, (5, 5), strides=(2, 2), activation=activation_function))
 model.add(BatchNormalization()) # Added Batchnorm
 
-model.add(Conv2D(64, (1, 1), activation=activation_function)) # Added 1x1 convolutions
-
 model.add(Conv2D(36, (5, 5), strides=(2, 2), activation=activation_function))
 model.add(BatchNormalization()) # Added Batchnorm
 
 model.add(Conv2D(48, (5, 5), strides=(2, 2), activation=activation_function))
 model.add(BatchNormalization()) # Added Batchnorm
 
-model.add(Conv2D(64, (1, 1), activation=activation_function)) # Added 1x1 convolutions
-
 model.add(Conv2D(64, (3, 3), activation=activation_function))
 model.add(BatchNormalization()) # Added Batchnorm
 
 model.add(Conv2D(64, (3, 3), activation=activation_function))
 model.add(BatchNormalization()) # Added Batchnorm
-
-model.add(Conv2D(64, (1, 1), activation=activation_function)) # Added 1x1 convolutions
 
 model.add(Flatten())
 
@@ -145,7 +139,7 @@ checkpointer = ModelCheckpoint(filepath="model_checkpoint_{epoch:02d}.hdf5", ver
 
 history_object = model.fit_generator(train_generator, steps_per_epoch = 3 * len(train_samples)/BATCH_SIZE, \
         validation_data = validation_generator, validation_steps = 3 * len(validation_samples)/BATCH_SIZE, \
-        epochs=20, callbacks=[checkpointer]) 
+        epochs=5, callbacks=[checkpointer]) 
 
 print('saving model')
 model.save('final_model.h5')
