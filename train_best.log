@@ -1,0 +1,47 @@
+131/131 [============================>.] - ETA: 7s - loss: 0.0734 Epoch 00000: saving model to model_checkpoint_00.hdf5
+132/131 [==============================] - 1130s - loss: 0.0731 - val_loss: 0.0541
+Epoch 2/20
+131/131 [============================>.] - ETA: 7s - loss: 0.0286 Epoch 00001: saving model to model_checkpoint_01.hdf5
+132/131 [==============================] - 1084s - loss: 0.0286 - val_loss: 0.0490
+Epoch 3/20
+131/131 [============================>.] - ETA: 7s - loss: 0.0257 Epoch 00002: saving model to model_checkpoint_02.hdf5
+132/131 [==============================] - 1076s - loss: 0.0257 - val_loss: 0.0410
+Epoch 4/20
+131/131 [============================>.] - ETA: 7s - loss: 0.0242 Epoch 00003: saving model to model_checkpoint_03.hdf5
+132/131 [==============================] - 1074s - loss: 0.0243 - val_loss: 0.0286
+Epoch 5/20
+131/131 [============================>.] - ETA: 7s - loss: 0.0235 Epoch 00004: saving model to model_checkpoint_04.hdf5
+132/131 [==============================] - 1096s - loss: 0.0235 - val_loss: 0.0233
+Epoch 6/20
+131/131 [============================>.] - ETA: 7s - loss: 0.0226 Epoch 00005: saving model to model_checkpoint_05.hdf5
+132/131 [==============================] - 1078s - loss: 0.0226 - val_loss: 0.0223
+Epoch 7/20
+131/131 [============================>.] - ETA: 7s - loss: 0.0220 Epoch 00006: saving model to model_checkpoint_06.hdf5
+132/131 [==============================] - 1072s - loss: 0.0220 - val_loss: 0.0216
+Epoch 8/20
+131/131 [============================>.] - ETA: 7s - loss: 0.0216 Epoch 00007: saving model to model_checkpoint_07.hdf5
+132/131 [==============================] - 1072s - loss: 0.0216 - val_loss: 0.0209
+Epoch 9/20
+131/131 [============================>.] - ETA: 7s - loss: 0.0211 Epoch 00008: saving model to model_checkpoint_08.hdf5
+132/131 [==============================] - 1070s - loss: 0.0211 - val_loss: 0.0205
+Epoch 10/20
+131/131 [============================>.] - ETA: 7s - loss: 0.0209 Epoch 00009: saving model to model_checkpoint_09.hdf5
+132/131 [==============================] - 1072s - loss: 0.0209 - val_loss: 0.0211
+Epoch 11/20
+131/131 [============================>.] - ETA: 7s - loss: 0.0207 Epoch 00010: saving model to model_checkpoint_10.hdf5
+132/131 [==============================] - 1069s - loss: 0.0207 - val_loss: 0.0200
+Epoch 12/20
+131/131 [============================>.] - ETA: 7s - loss: 0.0205 Epoch 00011: saving model to model_checkpoint_11.hdf5
+132/131 [==============================] - 1070s - loss: 0.0205 - val_loss: 0.0200
+Epoch 13/20
+131/131 [============================>.] - ETA: 7s - loss: 0.0201 Epoch 00012: saving model to model_checkpoint_12.hdf5
+132/131 [==============================] - 1084s - loss: 0.0201 - val_loss: 0.0197
+Epoch 14/20
+131/131 [============================>.] - ETA: 7s - loss: 0.0200 Epoch 00013: saving model to model_checkpoint_13.hdf5
+132/131 [==============================] - 1102s - loss: 0.0200 - val_loss: 0.0194
+Epoch 15/20
+131/131 [============================>.] - ETA: 59s - loss: 0.0196 Epoch 00014: saving model to model_checkpoint_14.hdf5
+132/131 [==============================] - 7999s - loss: 0.0196 - val_loss: 0.0196
+Epoch 16/20
+131/131 [============================>.] - ETA: 7s - loss: 0.0193 Epoch 00015: saving model to model_checkpoint_15.hdf5
+132/131 [==============================] - 1112s - loss: 0.0193 - val_loss: 0.0196
